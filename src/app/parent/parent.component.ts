@@ -1,10 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-parent',
   templateUrl: './parent.component.html',
-  styleUrls: ['./parent.component.css']
+  styleUrls: ['./parent.component.css'],
 })
-export class ParentComponent {
+export class ParentComponent implements OnInit {
+  @Input()
+  parentMessage!: string;
 
+  constructor() {}
+
+  ngOnInit(): void {}
 }
