@@ -6,10 +6,11 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./parent.component.css'],
 })
 export class ParentComponent implements OnInit {
-  @Input()
-  parentMessage!: string;
-
   constructor() {}
 
   ngOnInit(): void {}
+
+  receiveMessage(msg) {
+    alert(msg);
+  }
 }
